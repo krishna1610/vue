@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>TVMaze App</title>
+
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <style>@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');</style>
+    </head>
+
+    <body>
+        <div id="TV" v-cloak>
+            <div class="jumbotron jumbotron-fluid">
+                <!-- Application Title and tagline-->
+                <div>
+                    <div class="row">
+                        <div class="col-lg">
+                            <h1 class="display-2">{{ appName }}</h1>
+                            <hr>
+                            <p class="lead">TVMaze Search App For People</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div v-cloak class="container">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <div v-if="data.length==0">
+                        <input v-model="search_" ></input>
+                        <button v-on:Click="search" class="btn">Search</button>
+                        </div>
+                        
+                        <div v-if="info.length==0"  v-for="d in data">
+                            <button v-on:Click="fetch(d.id)">{{d.name}}</button>
+                        </div>
+
+                        <div v-if="info.length!=0">
+                        <div id="right">{{info[0].NA}}</div>
+                        <div class="info">{{info[0].name}}</div>
+                        <div class="info">{{info[0].country}}</div>
+                        <div class="info">{{info[0].birthday}}</div>
+                        <div class="info">{{info[0].gender}}</div>
+                        <img v-bind:src="info[0].img" class="img-thumbnail"/>
+                        <button v-on:Click="reboot" class="btn">Another People</button>
+
+                    </div>
+                        
+                </div>
+                   
+            </div>
+        </div>
+        </div>
+
+        <script src="https://unpkg.com/vue@2.6.11/dist/vue.js"></script>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script type="text/javascript" src="app.js"></script>
+    </body>
+</html>

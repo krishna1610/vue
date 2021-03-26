@@ -1,0 +1,44 @@
+
+p{
+	color: #e30b0b;
+	text-align: center;
+	font-family: 'Anton', sans-serif;
+	text-shadow: 2px 2px 5px #0a0a0a;
+
+}
+
+hr{
+	width: 600px;
+	border: 1px solid #8a8584;
+}
+
+.jumbotron{
+	background-color: #f0ce5d;
+}
+
+.display-2{
+	text-align: center;
+	font-family: 'Anton', sans-serif;
+	font-size: 100px;
+	text-shadow: 2px 2px 5px #e30b0b;
+}
+
+.btn{
+	background-color: #6b6767;
+	color:#fcf7f7;
+}
+
+body{
+	background-color: #c7c3c3;
+}
+
+#right{
+	font-family: 'Anton', sans-serif;
+	font-size: 3em;
+	color: #2409eb;
+}
+
+.info{
+	color: #2409eb;
+	font-size: 2em;
+}
